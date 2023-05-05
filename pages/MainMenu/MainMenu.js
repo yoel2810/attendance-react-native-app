@@ -18,13 +18,14 @@ const MainMenu = ({ navigation }) => {
     <View style={styles.page}>
       <Text style={styles.mainTitle}>לומדים ביחד</Text>
       <Text style={styles.goodMorning}>בוקר טוב יואל הרטמן</Text>
-      <View style={styles.container}>
+      <View style={styles.table}>
         <View style={styles.row}>
           {optionsList.slice(0, 3).map((item, index) => (
             <TouchableOpacity
+              key={item}
               onPress={() => navigation.navigate("Login Screen")}
             >
-              <MenuSquare key={item} content={item} />
+              <MenuSquare content={item} />
             </TouchableOpacity>
           ))}
         </View>
@@ -45,21 +46,32 @@ const MainMenu = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   page: {
-    
+    flex: 1,
+    alignItems: "center",
   },
   mainTitle: {
     fontSize: 25,
     textAlign: "center",
+    borderColor: "aqua",
+    borderWidth: 3,
+    width: 330,
+    paddingTop: 10,
+    paddingBottom: 10,
+    color: "blue",
+    marginTop: 40,
   },
   goodMorning: {
-    textAlign: "center",
     fontSize: 25,
+    color: "orange",
+    marginTop: 20,
+    marginBottom: 20,
+    width: 330,
   },
-  container: {
+  table: {
     // flex: 1,
-    // flexDirection: "column",
     // justifyContent: "center",
-    alignItems: "center",
+    // alignItems: "center",
+    
   },
   row: {
     flexDirection: "row",

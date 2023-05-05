@@ -1,29 +1,17 @@
 import { StyleSheet, Text, View } from "react-native";
 
 const Message = ({ content }) => {
-  return (
-    <View>
-      <Text style={styles.title}>הודעות</Text>
-      <View style={styles.container}>
-        <Text>{content}</Text>
-      </View>
-    </View>
-  );
+  return <Text style={styles.content}>{content}</Text>;
 };
 
 const styles = StyleSheet.create({
-  page: {},
-  title: {
-    textAlign: "center",
-    fontSize: 25,
-    marginTop: 30,
-    marginBottom: 30,
-  },
-  container: {
+  content: {
     backgroundColor: "aqua",
-    marginLeft: 20,
-    marginRight: 20,
-    height: 100,
+    textAlign: "left",
+    fontSize: 20,
+    minHeight: "15%",
+    paddingRight: 10
+    
   },
 });
 

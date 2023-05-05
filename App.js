@@ -13,12 +13,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Login Screen" component={MessageBoard} />
         <Stack.Screen
           name="Main Menu"
           component={MainMenu}
           options={{ title: "התפריט הראשי" }}
         />
-        <Stack.Screen name="Login Screen" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
